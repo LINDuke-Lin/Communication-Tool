@@ -4,11 +4,11 @@ using uPLibrary.Networking.M2Mqtt.Messages;
 
 namespace Communication.Mqtt.Services
 {
-    internal static class ConnectService
+    public static class ConnectService
     {
-        private static MqttClient? _mqttClient;
+        public static MqttClient? _mqttClient;
         private static Thread? t_mqtt;
-        private static ConnectModel connectModel =new();
+        private static ConnectModel connectModel = new();
 
         private static void _TryContinueConnect()
         {
@@ -35,7 +35,8 @@ namespace Communication.Mqtt.Services
         }
         private static void client_MqttMsgPublishTransferReceived(object sender, MqttMsgPublishEventArgs e)
         {
-
+            string msg = System.Text.Encoding.UTF8.GetString(e.Message);
+            Console.WriteLine($"Get Queue : {msg}");
         }
         private static void Subscribe()
         {
@@ -58,10 +59,10 @@ namespace Communication.Mqtt.Services
 
         public static void ConnectMqtt(ConnectModel _connectModel)
         {
-            if(connectModel == null)
-                throw new ArgumentNullException(nameof(connectModel));
+            if (_connectModel == null)
+                throw new ArgumentNullException(nameof(_connectModel));
 
-            connectModel = connectModel;
+            connectModel = _connectModel;
             t_mqtt = new Thread(Subscribe);
             t_mqtt.Start();
         }
