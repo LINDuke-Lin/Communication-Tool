@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Communication.Lib", "Src\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Communication.Demo", "Src\Communication.Demo\Communication.Demo.csproj", "{EE70B9EC-A245-4106-9759-29767F1EAAD6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Communication.Redis", "Src\Communication.Redis\Communication.Redis.csproj", "{B28F5000-1169-46DC-B774-70E3C21FFA10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{EE70B9EC-A245-4106-9759-29767F1EAAD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE70B9EC-A245-4106-9759-29767F1EAAD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE70B9EC-A245-4106-9759-29767F1EAAD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B28F5000-1169-46DC-B774-70E3C21FFA10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28F5000-1169-46DC-B774-70E3C21FFA10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28F5000-1169-46DC-B774-70E3C21FFA10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28F5000-1169-46DC-B774-70E3C21FFA10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

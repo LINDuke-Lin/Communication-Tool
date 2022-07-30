@@ -1,10 +1,18 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Communication.Lib.Services;
+using Microsoft.Extensions.DependencyInjection;
+
+
+
+var diProvider = new ServiceCollection().AddSingleton<IRedisService, RedisService>()
+    .AddSingleton<IMqttLib, MqttLib>()
+    .BuildServiceProvider();
 
 Console.WriteLine("Hello, World!");
 
-IMqttLib mqttLib = new MqttLib();
 
+
+var mqttLib = diProvider.GetService<IMqttLib>();
 mqttLib.Connect();
 
 string msg;
