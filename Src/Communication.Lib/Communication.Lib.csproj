@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Communication.Mqtt\Communication.Mqtt.csproj" />
+    <ProjectReference Include="..\Communication.Redis\Communication.Redis.csproj" />
   </ItemGroup>
 
 </Project>
